@@ -53,6 +53,5 @@ app.use(async (ctx) => {
 });
 
 const port = process.env.PORT || 8888;
-const server = http.createServer(app.callback());
-
-server.listen(port);
+// eslint-disable-next-line no-unused-vars
+const server = http.createServer(app.callback()).listen(port);
