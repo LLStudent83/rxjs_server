@@ -47,15 +47,9 @@ app.use(async (ctx, next) => {
 const report = messages.getMessages();
 
 app.use(async (ctx) => {
-  console.log('ctx', ctx);
-  // console.log(report);
-
-  // ctx.response.body = setInterval(() => report, 3000);
   ctx.response.body = report;
   console.log('ctx', ctx.response.body);
 });
-
-// console.log(report);
 
 const port = process.env.PORT || 8888;
 const server = http.createServer(app.callback());
