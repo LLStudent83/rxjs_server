@@ -47,7 +47,9 @@ const report = messages.getMessages();
 
 app.use(async (ctx) => {
   ctx.response.body = report;
-  console.log('ctx', ctx.response.body);
+  ctx.response.set({
+    'Access-Control-Allow-Origin': '*',
+  });
 });
 
 const port = process.env.PORT || 8888;
