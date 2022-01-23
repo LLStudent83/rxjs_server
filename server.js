@@ -40,7 +40,6 @@ app.use(async (ctx, next) => {
     if (ctx.request.get('Access-Control-Request-Headers')) {
       ctx.response.set('Access-Control-Allow-Headers', ctx.request.get('Access-Control-Request-Headers'));
     }
-
     ctx.response.status = 204;
   }
 });
